@@ -1,0 +1,10 @@
+server:
+  port: 9453
+  servlet:
+    context-path: /v1/linebotserver
+
+spring:
+  application:
+    name: "linebot"
+  datasource:
+    url: ""
