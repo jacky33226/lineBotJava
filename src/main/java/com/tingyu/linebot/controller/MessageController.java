@@ -1,5 +1,6 @@
 package com.tingyu.linebot.controller;
 
+import com.linecorp.bot.client.LineMessagingClient;
 import com.linecorp.bot.model.event.Event;
 import com.linecorp.bot.model.event.MessageEvent;
 import com.linecorp.bot.model.event.message.TextMessageContent;
@@ -24,6 +25,12 @@ public class MessageController {
     @EventMapping
     public void handleDefaultMessageEvent(Event event) {
         System.out.println("event: " + event);
+    }
+
+    public void apiClient(){
+
+        LineMessagingClient client = LineMessagingClient.builder("YOUR_CHANNEL_TOKEN").build();
+
     }
 
 }

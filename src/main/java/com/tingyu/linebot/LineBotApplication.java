@@ -9,6 +9,7 @@ import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author jacky
@@ -17,6 +18,7 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  */
 @SpringBootApplication(exclude= {DataSourceAutoConfiguration.class})
 @LineMessageHandler
+@EnableFeignClients
 public class LineBotApplication {
 
     public static void main(String[] args) {
